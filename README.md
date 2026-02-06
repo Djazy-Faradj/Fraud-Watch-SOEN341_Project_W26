@@ -30,6 +30,17 @@ To build this project, the project MealMajor needs to address the challenges:
 
 Team Members and Roles
 
+| Team Member                 | Student ID | Role(s)                           |
+| --------------------------- | ---------: | --------------------------------- |
+| Nadir Taleb                 |   40276506 | Backend Developer; Documentation  |
+| Hao Qi                      |   40105579 | Frontend Developer                |
+| Hanad-Keysse Mohamed Hassan |   40299566 | Repository; Frontend Developer    |
+| Djazy Faradj                |   40315411 | Backend Developer                 |
+| Fahed Waheed                |   40286415 | Sprint Planning & Devops          |
+| Hadile Magramane            |   40316211 | Devops                            |
+
+
+
 Our team uses the Agile & Scrum development framework to ensure flexibility and efficiency in project development.
 
 
