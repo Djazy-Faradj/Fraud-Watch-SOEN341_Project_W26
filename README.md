@@ -1,46 +1,32 @@
-# Fraud-Watch-SOEN341_Project_W26
-Meal Major: A Meal Prep and Healthy Living Planner
+# Fraud-Watch-SOEN341_Project_W26  
+## MealMajor — Meal Prep & Healthy Living Planner
 
-Project Description
+### Overview
+**MealMajor** is a web app designed for students to **plan meals**, **track groceries**, and **discover simple healthy recipes**.
 
-In the context of modern life, maintaining healthy eating habits amidst a busy lifestyle is often a significant challenge, especially for students and working professionals who frequently face the following critical points:
+### Problem
+Students and busy users are often struggling with:
+- **Time pressure**: no planning leads to longer prep time and last-minute decisions  
+- **Budget waste**: unclear grocery needs leads to unnecessary purchases  
+- **Unhealthy choices**: limited easy recipe options makes it so that fast food becomes the default  
 
-Time Management Pressure: Lack of systematic planning leads to excessive time wasted on meal preparation.
+### Objective
+Help users **simplify meal planning** and build a **efficient and healthier routine**.
 
-Budget and Resource Waste: Without a clear grocery list, it's easy to buy duplicate or unnecessary ingredients.
+### Key Features
+– Plan Meals: Users can utilize the weekly planning function to plan their meals for the week in advance, reducing the pressure of last-minute decision-making. 
+– Track Groceries: By linking to plans, the system helps users accurately track needed ingredients, optimizing their shopping lists. 
+– Propose Easy Recipes:** Recommends simple, inexpensive, and nutritionally balanced recipes tailored to student needs. 
 
-Health and Nutrition Neglect: Due to a lack of easy-to-follow recipes, students often tend to choose unhealthy fast food.
+### Team Members and Roles
+| Team Member | Student ID | Role(s) |
+|---|---:|---|
+| Nadir Taleb | 40276506 | Backend Developer; Documentation |
+| Hao Qi | 40105579 | Frontend Developer |
+| Hanad-Keysse Mohamed Hassan | 40299566 | Repository; Frontend Developer |
+| Djazy Faradj | 40315411 | Backend Developer |
+| Fahed Waheed | 40286415 | Sprint Planning & DevOps |
+| Hadile Magramane | 40316211 | DevOps |
 
-
-Core Objective
-
-The core objective of this MealMajor project is to help users simplify the meal planning process, achieving a healthier and more efficient lifestyle
-
-
-Implementation
-
-To build this project, the project MealMajor needs to address the challenges:
-
-– Plan Meals: Users can utilize the weekly planning function to plan their meals for the week in advance, reducing the pressure of last-minute decision-making.
-
-– Track Groceries: By linking to plans, the system helps users accurately track needed ingredients, optimizing their shopping lists.
-
-– Propose Easy Recipes:** Recommends simple, inexpensive, and nutritionally balanced recipes tailored to student needs.
-
-
-Team Members and Roles
-
-| Team Member                 | Student ID | Role(s)                           |
-| --------------------------- | ---------: | --------------------------------- |
-| Nadir Taleb                 |   40276506 | Backend Developer; Documentation  |
-| Hao Qi                      |   40105579 | Frontend Developer                |
-| Hanad-Keysse Mohamed Hassan |   40299566 | Repository; Frontend Developer    |
-| Djazy Faradj                |   40315411 | Backend Developer                 |
-| Fahed Waheed                |   40286415 | Sprint Planning & Devops          |
-| Hadile Magramane            |   40316211 | Devops                            |
-
-
-
-Our team uses the Agile & Scrum development framework to ensure flexibility and efficiency in project development.
-
-
+### Development Approach
+We follow an **Agile/Scrum** workflow using GitHub for version control, issue tracking, and sprint deliverables.
