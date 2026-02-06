@@ -16,7 +16,7 @@ Help users **simplify meal planning** and build a **efficient and healthier rout
 ### Key Features
 – Plan Meals: Users can utilize the weekly planning function to plan their meals for the week in advance, reducing the pressure of last-minute decision-making. 
 – Track Groceries: By linking to plans, the system helps users accurately track needed ingredients, optimizing their shopping lists. 
-– Propose Easy Recipes:** Recommends simple, inexpensive, and nutritionally balanced recipes tailored to student needs. 
+– Propose Easy Recipes: Recommends simple, inexpensive, and nutritionally balanced recipes tailored to student needs. 
 
 ### Team Members and Roles
 | Team Member | Student ID | Role(s) |
