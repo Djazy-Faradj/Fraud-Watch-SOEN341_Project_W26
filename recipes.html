@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Recipes - Material Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/recipes.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+
+  <body>
+    <div id="message-banner"></div>
+
+    <div class="header">
+      <h1>Manage Recipes</h1>
+      <div>
+        <button id="add-recipe-btn" class="btn btn-primary">
+          <i class="fa fa-plus"></i> Create Recipe
+        </button>
+        <button id="home-btn" class="btn btn-secondary">
+          <i class="fa fa-home"></i> Home
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="search-filter-bar"
+      style="
+        background: rgba(255, 255, 255, 0.95);
+        padding: 15px 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+      "
+    >
+      <div style="flex: 1; min-width: 250px">
+        <label
+          for="search-input"
+          style="
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+          "
+          >Search Recipes</label
+        >
+        <div style="position: relative">
+          <i
+            class="fa fa-search"
+            style="
+              position: absolute;
+              left: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+              color: #888;
+            "
+          ></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search by name, ingredient, or step..."
+            style="
+              width: 100%;
+              padding: 10px 10px 10px 35px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-family: inherit;
+              font-size: 14px;
+            "
+          />
+        </div>
+      </div>
+      <div style="min-width: 200px">
+        <label
+          for="filter-cost"
+          style="
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+          "
+          >Max Cost ($)</label
+        >
+        <div style="display: flex; gap: 10px; align-items: center">
+          <input
+            type="range"
+            id="filter-cost-range"
+            min="0"
+            max="100"
+            step="1"
+            value="100"
+            style="flex: 1"
+          />
+          <input
+            type="number"
+            id="filter-cost-number"
+            min="0"
+            step="0.5"
+            value="100"
+            style="
+              width: 80px;
+              padding: 8px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-family: inherit;
+              font-size: 14px;
+            "
+          />
+        </div>
+      </div>
+      <div style="display: flex; align-items: flex-end; padding-bottom: 2px">
+        <button
+          id="clear-filters-btn"
+          class="btn btn-secondary"
+          style="padding: 10px 15px"
+        >
+          <i class="fa fa-times"></i> Clear Filter
+        </button>
+      </div>
+    </div>
+
+    <div class="recipes-grid" id="recipes-container">
+      <!-- Recipes will be loaded here -->
+    </div>
+
+    <!-- Recipe Form Modal -->
+    <div id="recipe-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modal-title">Create Recipe</h2>
+          <span class="close" id="close-modal">&times;</span>
+        </div>
+        <form id="recipe-form">
+          <input type="hidden" id="recipe-id" />
+          <div class="form-group">
+            <label for="recipe-name">Recipe Name *</label>
+            <input
+              type="text"
+              id="recipe-name"
+              required
+              placeholder="e.g., Spaghetti Bolognese"
+            />
+          </div>
+          <div class="form-group">
+            <label for="recipe-ingredients">Ingredients *</label>
+            <textarea
+              id="recipe-ingredients"
+              required
+              placeholder="List ingredients..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="recipe-steps">Steps *</label>
+            <textarea
+              id="recipe-steps"
+              required
+              placeholder="Step-by-step instructions..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="recipe-cost">Estimated Cost ($) *</label>
+            <input
+              type="number"
+              id="recipe-cost"
+              step="0.01"
+              min="0"
+              required
+              placeholder="e.g., 15.50"
+            />
+          </div>
+          <div class="form-group">
+            <label for="recipe-time">Estimated Time (mins) *</label>
+            <input
+              type="number"
+              id="recipe-time"
+              min="1"
+              required
+              placeholder="e.g., 30"
+            />
+          </div>
+          <div class="form-group">
+            <label>Allergens</label>
+            <div
+              style="display: flex; gap: 10px; flex-wrap: wrap"
+              id="allergens-container"
+            >
+              <label
+                ><input type="checkbox" name="allergens" value="Peanuts" />
+                Peanuts</label
+              >
+              <label
+                ><input type="checkbox" name="allergens" value="Dairy" />
+                Dairy</label
+              >
+              <label
+                ><input type="checkbox" name="allergens" value="Gluten" />
+                Gluten</label
+              >
+              <label
+                ><input type="checkbox" name="allergens" value="Shellfish" />
+                Shellfish</label
+              >
+              <label
+                ><input type="checkbox" name="allergens" value="Soy" />
+                Soy</label
+              >
+              <label
+                ><input type="checkbox" name="allergens" value="Nuts" /> Tree
+                Nuts</label
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Dietary Tags</label>
+            <div
+              style="display: flex; gap: 10px; flex-wrap: wrap"
+              id="dietary-container"
+            >
+              <label
+                ><input type="checkbox" name="dietary" value="Vegan" />
+                Vegan</label
+              >
+              <label
+                ><input type="checkbox" name="dietary" value="Vegetarian" />
+                Vegetarian</label
+              >
+              <label
+                ><input type="checkbox" name="dietary" value="Keto" />
+                Keto</label
+              >
+              <label
+                ><input type="checkbox" name="dietary" value="Paleo" />
+                Paleo</label
+              >
+              <label
+                ><input type="checkbox" name="dietary" value="Halal" />
+                Halal</label
+              >
+              <label
+                ><input type="checkbox" name="dietary" value="Kosher" />
+                Kosher</label
+              >
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" id="cancel-btn" class="btn btn-secondary">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Save Recipe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal">
+      <div class="modal-content" style="max-width: 400px; text-align: center">
+        <div class="modal-header" style="justify-content: center">
+          <h2>Delete Recipe</h2>
+        </div>
+        <p style="margin: 20px 0; font-size: 16px">
+          Are you sure you want to delete this recipe? This action cannot be
+          undone.
+        </p>
+        <div class="form-actions" style="justify-content: center">
+          <button
+            type="button"
+            id="cancel-delete-btn"
+            class="btn btn-secondary"
+          >
+            Cancel
+          </button>
+          <button type="button" id="confirm-delete-btn" class="btn btn-danger">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="supabase-init.js"></script>
+    <script src="scripts/recipes.js"></script>
+  </body>
+</html>
