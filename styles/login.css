@@ -1,0 +1,176 @@
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.contain {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('https://images.pexels.com/photos/1640770/pexels-photo-1640770.jpeg');
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.materialContainer {
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.box {
+    position: relative;
+    background: #fff;
+    padding: 60px 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    transition: 400ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.box::before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: rgba(255, 255, 255, .6);
+    transform: scale(.95);
+    z-index: -1;
+}
+
+.title {
+    width: 100%;
+    line-height: 46px;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ED2553;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.title:before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    background: #ED2553;
+}
+
+.input {
+    position: relative;
+    margin-top: 30px;
+    height: 70px;
+    width: 100%;
+}
+
+.input input {
+    width: 100%;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 300;
+    position: relative;
+    z-index: 5;
+}
+
+.input label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    line-height: 60px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.4);
+    transition: 300ms ease;
+    pointer-events: none;
+}
+
+.input input:focus+label,
+.input input:not(:placeholder-shown)+label {
+    top: -20px;
+    font-size: 14px;
+    color: #ED2553;
+}
+
+.input:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.input .spin {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ED2553;
+    z-index: 4;
+    transition: 400ms ease;
+}
+
+.input input:focus~.spin {
+    width: 100%;
+}
+
+.button.login {
+    width: 100%;
+    margin-top: 40px;
+    height: 60px;
+    position: relative;
+}
+
+.button.login button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-weight: 900;
+    transition: 300ms;
+    position: relative;
+}
+
+.button.login button:hover {
+    color: #ED2553;
+    border-color: #ED2553;
+}
+
+.user-register {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.user-register:hover {
+    color: #ED2553;
+}
+

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Material Design</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/home.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+
+  <body>
+    <div class="materialContainer">
+      <h1>Welcome Home!</h1>
+      <p id="welcome-msg">You have successfully logged in.</p>
+      <button
+        id="recipes-btn"
+        class="btn-logout"
+        style="background: #4caf50; margin-right: 10px"
+      >
+        Manage Recipes
+      </button>
+      <button id="logout-btn" class="btn-logout">Logout</button>
+
+      <div class="profile-section">
+        <h2>Your Profile Preferences</h2>
+        <div id="message-banner"></div>
+
+        <div class="pref-group">
+          <label class="group-title">Dietary Preferences</label>
+          <div class="checkbox-grid" id="diet-container">
+            <label
+              ><input type="checkbox" name="profile_dietary" value="Vegan" />
+              Vegan</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="profile_dietary"
+                value="Vegetarian"
+              />
+              Vegetarian</label
+            >
+            <label
+              ><input type="checkbox" name="profile_dietary" value="Keto" />
+              Keto</label
+            >
+            <label
+              ><input type="checkbox" name="profile_dietary" value="Paleo" />
+              Paleo</label
+            >
+            <label
+              ><input type="checkbox" name="profile_dietary" value="Halal" />
+              Halal</label
+            >
+            <label
+              ><input type="checkbox" name="profile_dietary" value="Kosher" />
+              Kosher</label
+            >
+          </div>
+        </div>
+
+        <div class="pref-group">
+          <label class="group-title">Allergies</label>
+          <div class="checkbox-grid" id="allergy-container">
+            <label
+              ><input
+                type="checkbox"
+                name="profile_allergies"
+                value="Peanuts"
+              />
+              Peanuts</label
+            >
+            <label
+              ><input type="checkbox" name="profile_allergies" value="Dairy" />
+              Dairy</label
+            >
+            <label
+              ><input type="checkbox" name="profile_allergies" value="Gluten" />
+              Gluten</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="profile_allergies"
+                value="Shellfish"
+              />
+              Shellfish</label
+            >
+            <label
+              ><input type="checkbox" name="profile_allergies" value="Soy" />
+              Soy</label
+            >
+            <label
+              ><input type="checkbox" name="profile_allergies" value="Nuts" />
+              Tree Nuts</label
+            >
+          </div>
+        </div>
+
+        <button id="save-profile-btn" class="btn-save">Save Preferences</button>
+      </div>
+    </div>
+
+    <script src="supabase-init.js"></script>
+    <script src="scripts/home.js"></script>
+  </body>
+</html>

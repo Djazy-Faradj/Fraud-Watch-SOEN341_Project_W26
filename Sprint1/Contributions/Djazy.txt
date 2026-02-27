@@ -1,0 +1,7 @@
+Contribution for Sprint 1:
+
+I have implemented the following features:
+
+1. Supabase Integration: Integrated Supabase Auth and Database with the project.
+2. User Authentication: Implemented user authentication using Supabase Auth.
+3. User Homepage: Created a new page for user homepage when logged in.

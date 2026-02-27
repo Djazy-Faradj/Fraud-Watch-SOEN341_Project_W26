@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Login - Mac Dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+
+<body>
+
+    <div class="contain">
+        <div class="materialContainer">
+            <div class="box">
+                <div class="title">LOGIN</div>
+
+                <div class="input">
+                    <input type="text" id="uname" placeholder=" " required>
+                    <label for="uname">Email</label>
+                    <span class="spin"></span>
+                </div>
+
+                <div class="input">
+                    <input type="password" id="pwd" placeholder=" " required>
+                    <label for="pwd">Password</label>
+                    <span class="spin"></span>
+                </div>
+
+                <div class="button login">
+                    <button type="submit">
+                        <span>LOGIN</span>
+                        <i class="fa fa-check" style="display:none;"></i>
+                    </button>
+                </div>
+
+                <a href="register.html" class="user-register">Don't have an account?</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./supabase-init.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+
+</html>
