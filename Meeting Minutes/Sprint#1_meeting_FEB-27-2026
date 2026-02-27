@@ -1,0 +1,126 @@
+# Meeting Minutes - Meeting #2
+
+Date: 27/02/2026
+Time: 13:00
+
+## Attendees
+
+| Name | Student ID |
+|------|------------|
+| Hanad-Keysse, MOHAMED HASSAN | 40299566 |
+| Hadile, Magramane | 40316211 |
+| Hao, Qi | 40105579 |
+| Fahed, Waheed | 40286415 |
+| Nadir, Taleb | 40276506 |
+| Djazy, Faradj | 40315411 |
+
+---
+
+## Agenda Items
+Sprint 2 Progress Review and Sprint 3 Discussion
+
+---
+
+## Meeting Discussion
+
+### 0:00 — Djazy
+Opened the meeting and initiated Sprint 2 progress discussion. Confirmed role as Scrum Master and responsibility for hosting the meeting and recording notes.
+
+---
+
+### 0:44 — Djazy
+Presented backend progress for Sprint 2:
+- Created the **Recipes table** in Supabase.
+- Structured database fields including recipe name, ingredients, allergy information, cooking time, and additional attributes required for recipe management.
+
+---
+
+### 1:35 — Nadir
+Reported backend integration work:
+- Verified recipe filtering requirements.
+- Implemented scripts for recipe, login, and home pages.
+- Added session authentication guard.
+- Implemented recipe loading, filtering, search functionality, and CRUD operations connected to Supabase tables.
+
+---
+
+### 2:44 — Nadir
+Reported testing and CI pipeline progress:
+- Successfully tested features locally.
+- Created GitHub pull request for CI pipeline integration.
+- Pipeline validates JavaScript syntax during pull requests.
+- Current pipeline error expected since final code has not yet been pushed.
+
+---
+
+### 3:31 — Hao
+Reported frontend refactoring:
+- Extracted inline CSS and JavaScript from HTML files.
+- Organized code into separate style and script files to improve maintainability.
+
+---
+
+### 4:47 — Hao
+Implemented frontend features:
+- Recipe filtering interface.
+- Navigation transition from login page to recipe page.
+- Shared frontend implementation for backend integration.
+
+---
+
+### 5:21 — Fahed
+Presented Sprint Planning updates:
+- Documented user stories and tasks in sprint Excel sheet.
+- Included story points, priorities, risks, responsibilities, and deadlines.
+
+---
+
+### 5:49 — Fahed
+Explained improvements made to user stories:
+- Added explanations for assigned risk levels.
+- Separated technical tasks (e.g., CI pipeline) from functional user stories.
+
+---
+
+### 6:54 — All Members
+Confirmed completion of Sprint 2 tasks and began discussion on Sprint 3 objectives.
+
+---
+
+### 7:23 — Keysse
+Proposed adding a creative feature by separating recipes into **healthy** and **non-healthy** categories.
+
+---
+
+### 8:06 — Nadir
+Suggested potential AI integration to analyze recipes and estimate nutritional or health information.
+
+---
+
+### 9:07 — Hadile
+Raised concerns regarding AI reliability based on previous course experiences and grading expectations.
+
+---
+
+### 10:01 — All Members
+Discussed mitigation strategies:
+- Add recommendation disclaimers.
+- Reference trusted sources such as Government of Canada nutrition data.
+
+---
+
+### 10:36 — Djazy
+Highlighted positive sprint outcome:
+- Sprint planning and user stories were completed before development.
+- Team agreed to maintain this workflow for future sprints.
+
+---
+
+### 11:27 — All Members
+No blockers or additional issues were reported. Team agreed to continue collaboration during lab sessions if required.
+
+---
+
+## End of Meeting
+
+**11:36 — Meeting Adjourned**
