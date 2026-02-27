@@ -1,0 +1,8 @@
+Contribution for Sprint 2:
+
+I have implemented the following features:
+
+1. Supabase Backend Recipe Implementation: Crafted the backend design for the implementation of recipes. 
+    - Added a "Recipe" public schema used to store entries of the users recipes
+    - Implemented RLS policies to ensure safety and prevent non-authorized users from modifying or deleting recipes which aren't their own
+    - Communicated with team members on how I have structured it to ensure smooth integration of it on the website 
