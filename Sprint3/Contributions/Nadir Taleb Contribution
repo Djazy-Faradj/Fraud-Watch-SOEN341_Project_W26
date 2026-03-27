@@ -1,0 +1,23 @@
+Contribution for Sprint 3:
+
+I have contributed to the following:
+
+1. I worked on the backend (Supabase portion):
+
+Implemented and supported the Supabase backend logic for the weekly meal planner
+Worked with the meal_plans and meal_plan_items tables to support meal plan creation, loading, updating, and deletion
+Contributed to the logic for assigning recipes to specific days and meal types
+Helped enforce duplicate-prevention rules for weekly meal plans and meal slots
+
+2. I worked on the unit tests:
+
+Contributed to the design and planning of unit tests for Sprint 1 and Sprint 2 features
+Covered user account management features, including registration, login, session handling, profile preferences, and logout
+Covered recipe management features, including recipe creation, editing, deletion, search, filtering, and rendering behavior
+Helped ensure the tests were aligned with the CI requirement in the project instructions
+
+3. I contributed to feature verification and documentation:
+
+Reviewed the implemented backend behavior for correctness
+Verified that the Supabase logic supported the intended Sprint 3 functionality
+Documented my work and contribution for the sprint submission
