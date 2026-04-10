@@ -1,0 +1,70 @@
+Meeting Minutes - Meeting #4
+
+Date: April 08, 2026
+Time: 2:00 pm
+Location: Online
+
+
+Attendees
+Hanad-Keysse, MOHAMED HASSAN - 40299566
+Hadile, Magramane - 40316211
+Hao, Qi - 40105579
+Fahed, Waheed - 40286415
+Djazy, Faradj - 40315411
+
+
+Agenda Items
+Code refactoring
+Performing acceptance tests
+Fixing duplicate meal issue in weekly meal planner
+Discussion
+
+00:02 (Hadile)
+Introduced the objectives for Sprint #4, focusing on improving code quality, completing acceptance tests, and resolving known issues in the meal planner.
+
+00:25 (Keysse)
+Mentionned refactoring the existing codebase to improve readability and maintainability.
+
+00:48 (Djazy)
+Agreed and suggested prioritizing backend refactoring.
+
+01:05 (Fahed)
+Mentioned that some parts of the frontend could also benefit from cleanup and better organization.
+
+01:22 (ALL MEMBERS)
+Agreed to allocate time for both frontend and backend refactoring.
+
+01:40 (Keysse)
+Introduced the need to perform acceptance tests for both current and previous sprint features.
+
+02:05 (Hao)
+Confirmed that the team must complete:
+
+Two acceptance tests for Sprint #4
+Two acceptance tests from the previous sprint
+
+02:30 (Fahed)
+Brought up the issue of duplicate meals appearing in the weekly meal planner.
+
+02:42 (Djazy)
+Explained that the current implementation does not enforce uniqueness when adding meals.
+
+02:55 (Keysse)
+Proposed enforcing a constraint to ensure that the same meal cannot be added multiple times within the planner.
+
+03:10 (Hao)
+Suggested implementing validation logic to prevent duplicates at the time of meal insertion.
+
+04:00 (Keysse)
+Asked about task distribution for the sprint.
+
+04:10 (Djazy)
+Outlined responsibilities:
+
+Backend refactoring and validation logic
+Support for acceptance test implementation
+
+05:20 (Hadile)
+Summarized the sprint goals.
+05:45
+End of Meeting #4
